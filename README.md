@@ -1,3 +1,3 @@
-# stackblitz-angular-tailwind-minimal
+# angular-tailwind-minimal
 
-A StackBlitz template for small examples and demos using Angular and TailwindCSS without any fuss
+A scratch space for small Angular demos and examples using TailwindCSS, with a single component and lightweight setup
