@@ -1,5 +1,6 @@
-import { Component } from "@angular/core";
 import { CommonModule } from "@angular/common";
+import { Component } from "@angular/core";
+import { theme } from './theme';
 
 @Component({
   selector: "app-root",
@@ -10,4 +11,6 @@ import { CommonModule } from "@angular/common";
 })
 export class AppComponent {
   title = "stackblitz-angular-tailwind-minimal";
+
+  cbColourCode = theme.colors.cambridge_blue;
 }
