@@ -1,13 +1,12 @@
-import { Component } from "@angular/core";
 import { CommonModule } from "@angular/common";
+import { Component } from "@angular/core";
 
 @Component({
   selector: "app-root",
   standalone: true,
   imports: [CommonModule],
   templateUrl: "app.component.html",
-  styles: [],
 })
 export class AppComponent {
-  title = "stackblitz-angular-tailwind-minimal";
+  title = "angular-tailwind-minimal";
 }

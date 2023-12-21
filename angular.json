@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "stackblitz-angular-tailwind-minimal": {
+    "angular-tailwind-minimal": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -41,11 +41,11 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/stackblitz-angular-tailwind-minimal",
+            "outputPath": "dist/angular-tailwind-minimal",
             "index": "index.html",
-            "main": "main.ts",
+            "browser": "main.ts",
             "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.json",
             "styles": ["styles.css"],
@@ -68,9 +68,7 @@
               "outputHashing": "all"
             },
             "development": {
-              "buildOptimizer": false,
               "optimization": false,
-              "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
@@ -82,10 +80,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "stackblitz-angular-tailwind-minimal:build:production"
+              "buildTarget": "angular-tailwind-minimal:build:production"
             },
             "development": {
-              "browserTarget": "stackblitz-angular-tailwind-minimal:build:development"
+              "buildTarget": "angular-tailwind-minimal:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -93,10 +91,13 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "stackblitz-angular-tailwind-minimal:build"
+            "buildTarget": "angular-tailwind-minimal:build"
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
